@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Game Night</title>
+<meta name="description" content="Every game in one place. Pick a box, put it on the TV, and everyone plays from their phone.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#dba23a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css?v=1.0.0">
+</head>
+<body>
+
+<header class="top">
+  <h1>Game Night</h1>
+  <p class="lede">Pick a box. One screen shows the board, and everyone plays from their phone.</p>
+</header>
+
+<main>
+  <div class="shelf">
+    <ul class="rack" id="rack" aria-label="Games"></ul>
+  </div>
+
+  <noscript>
+    <p class="plain">This page needs JavaScript to open the boxes. The games are also at their own addresses:</p>
+    <ul class="plain">
+      <li><a href="https://feudnight.onrender.com/tv">Friend Feud</a></li>
+      <li><a href="https://friend-jeopardy.onrender.com/tv">Friend Jeopardy</a></li>
+      <li><a href="https://wheel-of-fortune-ov4a.onrender.com/tv">Friend Wheel</a></li>
+      <li><a href="https://friend-monopoly.onrender.com/tv">Friend Monopoly</a></li>
+      <li><a href="https://clue-4fcu.onrender.com/tv">Friend Clue</a></li>
+      <li><a href="https://legendary-friends-trivia-night.onrender.com/tv">Legendary Friends</a></li>
+      <li><a href="https://bingo-9asx.onrender.com/tv">Friend Bingo</a></li>
+      <li><a href="https://settlers-of-friends.onrender.com/tv">Settlers of Friends</a></li>
+    </ul>
+  </noscript>
+
+  <section class="how" aria-labelledby="how-h">
+    <h2 id="how-h">How a night works</h2>
+    <ol>
+      <li><span><strong>Open this page on the computer plugged into the TV</strong> and pick a game.</span></li>
+      <li><span><strong>The TV shows a QR code</strong> and a four-letter room code.</span></li>
+      <li><span><strong>Everyone scans it with their phone.</strong> No app, no account.</span></li>
+    </ol>
+    <p class="nap">Games nap when nobody is playing. The first person in waits up to a minute while one wakes up, and after that it is quick for everybody.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>Game Night</span> <span id="ver"></span>
+</footer>
+
+<dialog id="box" aria-labelledby="box-name">
+  <div class="lid" id="box-lid">
+    <img id="box-art" alt="" width="64" height="64">
+    <span class="letter" id="box-letter" hidden></span>
+    <h2 id="box-name"></h2>
+    <form method="dialog"><button class="shut" aria-label="Close">Close</button></form>
+  </div>
+
+  <div class="inside" id="view-info">
+    <p class="pitch" id="box-pitch"></p>
+    <dl class="facts">
+      <div><dt>Players</dt><dd id="f-players"></dd></div>
+      <div><dt>Big screen</dt><dd id="f-screen"></dd></div>
+      <div><dt>Host</dt><dd id="f-host"></dd></div>
+    </dl>
+    <p class="status" id="status" role="status" data-state="checking"><span class="dot" aria-hidden="true"></span><span id="status-text">Checking if it is awake</span></p>
+    <div class="acts">
+      <button class="btn main" id="act-main" type="button"></button>
+      <button class="btn" id="act-other" type="button"></button>
+    </div>
+    <p class="hint" id="act-hint"></p>
+  </div>
+
+  <div class="inside" id="view-wait" hidden>
+    <p class="waithead" id="wait-head" role="status"></p>
+    <div class="bar" aria-hidden="true"><i id="wait-bar"></i></div>
+    <p class="waitnote" id="wait-note"></p>
+    <div class="acts">
+      <button class="btn" id="wait-cancel" type="button">Cancel</button>
+      <a class="btn" id="wait-anyway" href="#" hidden>Open it anyway</a>
+    </div>
+  </div>
+</dialog>
+
+<script src="games.js?v=1.0.0"></script>
+<script src="hub.js?v=1.0.0"></script>
+</body>
+</html>

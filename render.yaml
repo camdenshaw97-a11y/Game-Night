@@ -1,0 +1,15 @@
+# Render: a free Static Site (no server, so it never goes to sleep).
+# Publish directory: public · Build command: none
+services:
+  - type: web
+    name: friendgamenight
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: ./public
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache
+      - path: /fonts/*
+        name: Cache-Control
+        value: public, max-age=604800
