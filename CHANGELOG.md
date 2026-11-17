@@ -3,6 +3,21 @@
 Every change to the hub gets an entry here, newest first. The version number is the same one shown
 in small print at the bottom of the page. Times are Pacific.
 
+## 1.1.0 · November 17, 2026
+
+**A new look, to match the games**
+- The page is now a dark stage instead of the rec-room wall and walnut shelf: deep navy, a row of
+  gold marquee bulbs across the top, and GAME NIGHT in the same tall lettering Friend Feud uses.
+- The eight boxes still wear their own game's colours and lettering. They are now even-sized cards
+  in a grid (four across on a computer, two across on a phone) instead of boxes on shelves.
+- The opened box is dark too: the facts are easier to scan, the main button is a big gold one, and
+  the waiting bar is gold.
+- Friend Feud's box has a new picture, a red strike tile, to match its new logo.
+- New home-screen icon and browser colour in the same navy.
+- Nothing about how the page works has changed: same boxes, same wording, same waking of a
+  sleeping game. `npm test` still checks 39 things (5 of them now ignore capital letters, because
+  the big buttons and the waiting headline are shown in capitals).
+
 ## 1.0.0 · November 16, 2026
 
 **First version: one address for every game**

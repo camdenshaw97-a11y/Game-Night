@@ -11,7 +11,7 @@
 (function () {
   'use strict';
 
-  var VERSION = '1.0.0';
+  var VERSION = '1.1.0';
   var GAMES = window.GAMES || [];
 
   var TRY_MS = 25000;        // how long one knock on the door may take before knocking again
